@@ -20,17 +20,17 @@ namespace TestsUnitaires
 		public void InitialiserTest()
 		{
 			_cb1 = new CompteBancaire(823456);
-			_cb1.DecouvertMaxiAutorisé = -500m;
+			_cb1.DecouvertMaxiAutorisÃ© = -500m;
 		}
 		
 		[TestMethod]
 		public void TesterCreationCompte()
 		{
-			// Vérifie la valeur par défaut de la date de création
+			// VÃ©rifie la valeur par dÃ©faut de la date de crÃ©ation
 			Assert.AreEqual(DateOnly.FromDateTime(DateTime.Today), _cb1.DateCreation);
 
-			// Vérifie la valeur par défaut du libellé
-			Assert.AreEqual($"Compte N°{_cb1.Numero}", _cb1.Libelle);
+			// VÃ©rifie la valeur par dÃ©faut du libellÃ©
+			Assert.AreEqual($"Compte NÃ©{_cb1.Numero}", _cb1.Libelle);
 		}
 
 		[DataTestMethod]
@@ -41,10 +41,10 @@ namespace TestsUnitaires
 		{
 			_cb2.Crediter((decimal)montant);
 
-			// Vérifie le solde du compte
+			// VÃ©rifie le solde du compte
 			Assert.AreEqual((decimal)solde, _cb2.Solde);
 
-			// Vérifie que l'opération a bien été enregistrée dans l'historique
+			// VÃ©rifie que l'opÃ©ration a bien Ã©tÃ© enregistrÃ©e dans l'historique
 			Assert.IsTrue(_cb2.Operations.Count == nbOp);
 			Assert.AreEqual((decimal)montant, _cb2.Operations[nbOp - 1].Montant);
 		}
@@ -56,10 +56,10 @@ namespace TestsUnitaires
 			string libelle = "Courses";
 			_cb1.Debiter(montant, libelle);
 
-			// Vérifie le solde du compte
+			// VÃ©rifie le solde du compte
 			Assert.AreEqual(-montant, _cb1.Solde);
 
-			// Vérifie que l'opération a bien été enregistrée dans l'historique
+			// VÃ©rifie que l'opÃ©ration a bien Ã©tÃ© enregistrÃ©e dans l'historique
 			Assert.IsTrue(_cb1.Operations.Count == 1);
 			Assert.AreEqual(-montant, _cb1.Operations[0].Montant);
 			Assert.AreEqual(libelle, _cb1.Operations[0].Libelle);
@@ -74,10 +74,10 @@ namespace TestsUnitaires
 			DateOnly dateEffet = new DateOnly(2025, 12, 20);
 			_cb1.Debiter(montant, libelle, dateEffet);
 
-			// Vérifie le solde du compte
+			// VÃ©rifie le solde du compte
 			Assert.AreEqual(-montant, _cb1.Solde);
 
-			// Vérifie que l'opération a bien été enregistrée dans l'historique
+			// VÃ©rifie que l'opÃ©ration a bien Ã©tÃ© enregistrÃ©e dans l'historique
 			Assert.IsTrue(_cb1.Operations.Count == 1);
 			Assert.AreEqual(-montant, _cb1.Operations[0].Montant);
 			Assert.AreEqual(libelle, _cb1.Operations[0].Libelle);

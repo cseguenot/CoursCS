@@ -1,0 +1,21 @@
+<Solution>
+  <Project Path="Bases/Bases.csproj" />
+  <Project Path="Fonctions/Fonctions.csproj" />
+  <Project Path="Chaines/Chaines.csproj" />
+  <Project Path="DatesDurées/DatesDurées.csproj" />
+  <Project Path="Enumérations/Enumérations.csproj" />
+  <Project Path="POO/POO.csproj" />
+  <Project Path="POO2/POO2.csproj" />
+  <Project Path="TypesValeurRef/TypesValeurRef.csproj" />
+  <Project Path="TestsUnitaires/TestsUnitaires.csproj" />
+  <Project Path="Erreurs/Erreurs.csproj" />
+  <Project Path="Héritage/Héritage.csproj" />
+  <Project Path="Interfaces_DI/Interfaces_DI.csproj" />
+  <Project Path="ClassesEtendues/ClassesEtendues.csproj" />
+  <Project Path="CollectionsGeneriques/CollectionsGeneriques.csproj" />
+  <Project Path="RequetesLINQ/RequetesLINQ.csproj" />
+  <Project Path="FichiersDossiers/FichiersDossiers.csproj" />
+  <Project Path="DéléguésEvènements/DéléguésEvènements.csproj" />
+  <Project Path="ProgAsychrone/ProgAsychrone.csproj" />
+  <Project Path="SyntaxesAvancées/SyntaxesAvancées.csproj" />
+</Solution>

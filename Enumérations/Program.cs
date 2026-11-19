@@ -12,8 +12,6 @@
 			//DemoEnumsPerso.TesterInterprétation();
 			//DemoEnumsPerso.TesterInterprétationEntier(2);
 			DemoEnumsPerso.TesterEnumFlags();
-
-			Console.ReadKey();
 		}
 	}
 }
