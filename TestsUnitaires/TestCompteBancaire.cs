@@ -33,7 +33,7 @@ namespace TestsUnitaires
 			Assert.AreEqual($"Compte Né{_cb1.Numero}", _cb1.Libelle);
 		}
 
-		[DataTestMethod]
+		[TestMethod]
 		[DataRow(20, 20, 1)]
 		[DataRow(200, 220, 2)]
 		[DataRow(2000, 2220, 3)]
@@ -85,11 +85,11 @@ namespace TestsUnitaires
 		}
 
 		[TestMethod]
-		[ExpectedException(typeof(ArgumentOutOfRangeException))]
 		public void TesterDebitDepassantDecouvertMaxi()
 		{
 			decimal montant = 700m;
 			_cb1.Debiter(montant); // doit lever une exception ArgumentOutOfRangeException
+			Assert.ThrowsExactly<ArgumentOutOfRangeException>(() => _cb1.Debiter(montant));	
 		}
 	}
 }
